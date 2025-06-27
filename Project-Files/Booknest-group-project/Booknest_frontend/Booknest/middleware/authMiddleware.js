@@ -1,0 +1,6 @@
+const jwt = require('jsonwebtoken');
+const { JWT_SECRET } = require('../server');
+
+// ... existing code ...
+const decoded = jwt.verify(token, JWT_SECRET);
+// ... existing code ... 
