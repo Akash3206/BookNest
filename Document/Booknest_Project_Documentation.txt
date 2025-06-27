@@ -127,16 +127,4 @@ Application will run on:
 - Frontend: http://localhost:5173
 - Backend API: http://localhost:5000
 
-7. Contributing Guidelines
---------------------------
 
-- Use consistent naming conventions and code formatting.
-- Always branch out from main for new features.
-- Include descriptive commit messages.
-- Test new features thoroughly before requesting integration.
-- Use .env.example for environment variable structure.
-
-8. License
-----------
-
-This project is released under the MIT License, allowing modification and distribution with attribution. Commercial usage is permitted.
