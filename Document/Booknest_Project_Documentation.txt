@@ -1,0 +1,142 @@
+
+Booknest - Project Documentation
+================================
+
+1. Project Overview
+-------------------
+
+Booknest is a full-stack online bookstore application developed to provide a seamless platform for users to discover, search, and purchase books. The system includes key e-commerce functionalities such as shopping cart management, wishlist creation, and order tracking. It is designed to cater to both regular users and administrators, offering separate interfaces and features for each role.
+
+Main Purpose:
+- To provide a responsive and user-friendly online bookstore interface.
+- To enable easy management of books, users, and orders via an admin dashboard.
+
+Target Users:
+- Customers: Can browse, search, purchase books, and manage their accounts.
+- Administrators: Have control over book inventory, user management, and order processing.
+
+2. Features
+-----------
+
+- Book Browsing & Search: Users can explore books by genre, title, or author.
+- Cart Management: Add/remove books from the cart, update quantities.
+- Wishlist Functionality: Mark and save favorite books.
+- Order Tracking: View and track the status of placed orders.
+- User Authentication: Signup, login, and secure JWT-based sessions.
+- Admin Dashboard:
+  - Add/edit/delete book listings
+  - Manage users and view order details
+- Responsive UI: Optimized for desktops, tablets, and mobile devices.
+- Fast Performance: Built using modern tools like Vite and Tailwind.
+
+3. Technology Stack
+-------------------
+
+Frontend:
+- React (with TypeScript): Component-based and type-safe user interface.
+- Vite: Fast development builds and live reloading.
+- Tailwind CSS: Utility-first styling and responsiveness.
+- React Router: Enables single-page application routing.
+
+Backend:
+- Node.js + Express: RESTful APIs.
+- MongoDB + Mongoose: Document-based data storage and modeling.
+- JWT: Token-based user authentication.
+- bcryptjs: Secure password hashing.
+
+4. Folder Structure
+-------------------
+
+booknest/
+|
+├── client/                 # Frontend application
+│   ├── src/
+│   │   ├── components/     # Reusable UI elements
+│   │   ├── pages/          # Main page views
+│   │   ├── routes/         # Route definitions
+│   │   ├── services/       # API interaction modules
+│   │   └── hooks/          # Custom React hooks
+│   └── index.html
+|
+├── server/                 # Backend server
+│   ├── controllers/        # Route logic for users, books, and orders
+│   ├── models/             # MongoDB schemas (User, Book, Order)
+│   ├── routes/             # API endpoint definitions
+│   ├── middleware/         # JWT auth checks and error handling
+│   ├── config/             # MongoDB and app config
+│   └── server.js           # Entry point of the server
+|
+└── .env                    # Environment configuration file
+
+5. Component / Module Descriptions
+----------------------------------
+
+Frontend Modules:
+- BookCard: Displays a preview of a book with title, price, and image.
+- CartItem: Displays each book added to the cart with quantity and price controls.
+- WishlistPage: Lists all books marked as favorites.
+- Auth Forms: Includes login and registration forms with validation.
+- AdminPanel: Separate views for book and order management.
+
+Backend Modules:
+- Auth Controller: Handles user login, signup, and JWT generation.
+- Book Controller: CRUD operations on book data.
+- Order Controller: Processes new orders and retrieves order history.
+- Middleware/Auth.js: Validates JWT tokens for protected routes.
+- User Model: Schema defining user details and password hash storage.
+
+6. Setup Instructions
+---------------------
+
+Prerequisites:
+- Node.js (v16 or above)
+- MongoDB (local or MongoDB Atlas)
+- Code editor (e.g., VS Code)
+
+Installation Steps:
+
+1. Clone the Project
+      git clone https://github.com/yourusername/booknest.git
+      cd booknest
+
+2. Configure Environment
+    Create a .env file in the server/ directory:
+      PORT=5000
+      MONGO_URI=your_mongo_uri
+      JWT_SECRET=your_secret_key
+
+3. Install Dependencies
+
+   Backend:
+      cd server
+      npm install
+
+   Frontend:
+      cd ../client
+      npm install
+
+4. Start the Application
+
+   Backend:
+      npm run dev
+
+   Frontend:
+      npm run dev
+
+Application will run on:
+- Frontend: http://localhost:5173
+- Backend API: http://localhost:5000
+
+7. Contributing Guidelines
+--------------------------
+
+- Use consistent naming conventions and code formatting.
+- Always branch out from main for new features.
+- Include descriptive commit messages.
+- Test new features thoroughly before requesting integration.
+- Use .env.example for environment variable structure.
+
+8. License
+----------
+
+This project is released under the MIT License, allowing modification and distribution with attribution. Commercial usage is permitted.
