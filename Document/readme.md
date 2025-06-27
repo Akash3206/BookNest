@@ -1,1 +1,2 @@
-this file contains the document
+this folder contains the documentation of the project
+
